@@ -36,10 +36,13 @@ html, body {
    NAVIGATION BAR
    =============================== */
 .nav-bar {
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+
 	list-style-type: none;
 	margin: 0;
 	padding: 0 20px;
-	overflow: hidden;
 	text-align: right;
 }
 
