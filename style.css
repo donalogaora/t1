@@ -9,12 +9,11 @@ html, body {
 }
 
 body {
-  background-image: url(../assets/main_background.png);
+  background-image: url(assets/main_background.png);
   background-repeat: no-repeat;
   background-position: right top;
   background-attachment: fixed;
   background-size: cover;
-  padding-top: 80px; /* adjust to match navbar height */
 }
 
 /*custom elements*/
@@ -162,28 +161,18 @@ apaypal-form {
   }
 }
 
-/* Clearfix */
+/*Navigation Bar*/
 .clearfix::after {
   content: "";
   clear: both;
   display: table;
 }
 
-/* Navbar container */
-.clearfix {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 100%;
-  z-index: 1000;
-  padding: 16px 32px; /* top/bottom | left/right */
-  box-sizing: border-box;
-}
-
 .nav-list {
   list-style-type: none;
   margin: 0;
   padding: 0 20px;
+  overflow: hidden;
   text-align: right;
 }
 
@@ -191,16 +180,17 @@ apaypal-form {
   display: inline-block;
 }
 
-.nav-list li + li {
-  margin-left: 12px;
-}
-
 .nav-link, .page-button {
-  font-size: 15px;
-  padding: 8px 14px;
-  font-weight: 600;
-  box-shadow: 0 6px 12px rgba(255, 0, 0, 0.35);
-  margin: 0;
+  display: block;
+  color: red;
+  text-align: center;
+  padding: 0.625rem 1.25rem; /* Proportional padding */
+  text-decoration: none;
+  border-radius: 0.3125rem; /* Rounded corners */
+  box-shadow: 0.3125rem 0.3125rem 0.625rem red; /* Responsive shadow */
+  background-color: white;
+  font-weight: bold;
+  margin: 0.3125rem; /* Responsive margin */
 }
 
 .page-button {
@@ -211,30 +201,20 @@ apaypal-form {
 .nav-link:hover {
   background-color: red;
   color: white;
-  box-shadow: 0 8px 18px rgba(255, 255, 255, 0.6);
-  /*box-shadow: 0.3125rem 0.3125rem 0.9375rem white; /* Adjusted shadow for hover */
+  box-shadow: 0.3125rem 0.3125rem 0.9375rem white; /* Adjusted shadow for hover */
 }
 
-/*
 @media screen and (max-width: 1024px) {
   .nav-link, .page-button {
-    font-size: 0.875rem; /* Slightly smaller for tablets *//*
+    font-size: 0.875rem; /* Slightly smaller for tablets */
     padding: 0.5rem 1rem; 
   }
 }
 
 @media screen and (max-width: 500px) {
   .nav-link, .page-button {
-    font-size: 0.75rem; /* Smaller for phones /*
-    padding: 0.375rem 0.75rem;
-  }
-}
-*/
-
-@media screen and (max-width: 500px) {
-  .nav-link, .page-button {
-    font-size: 14px;
-    padding: 7px 12px;
+    font-size: 0.75rem; /* Smaller for phones */
+    padding: 0.375rem 0.75rem; 
   }
 }
 
