@@ -127,21 +127,6 @@ footer a.footer-tc-text {
   color: #24252b; /* Color change on hover */
 }
 
-/* Shop T&C Text Style */
-.shop-tc-text {
-  font-size: 20px; /* Adjusted size to 20px */
-  font-weight: bold; /* Bold text */
-  color: red; /* Transparent fill color */
-  text-decoration: underline; /* Add underline */
-  cursor: pointer; /* Pointer cursor to indicate it's clickable */
-  padding-left: 10px; /* Space between "Order" and "T&C" */
-}
-
-/* Hover effect for Shop T&C text */
-.shop-tc-text:hover {
-  color: #24252b; /* Color change on hover */
-}
-
 /* Links style */
 .t7c-links {
   color: red; /* Set the link text color to red */
@@ -161,49 +146,8 @@ apaypal-form {
   align-items: center;
 }
 
-colour-table {
-  color: white;
-  text-align: center;
-  font-family: "Arial Black", sans-serif;
-  font-size: 12px;
-}
-
-.image-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* Center the items in the flex container */
-  align-items: center;
-  gap: 15px; /* Space between images */
-  width: 100%; /* Ensure the row takes full width */
-  max-width: 100%; /* Ensure the row is capped to 100% of the parent */
-  margin: 0 auto; /* Center the row within its parent */
-}
-
-.image-row img {
-  width: 25%; /* Increase width for larger screens */
-  max-width: 250px; /* Allow images to grow larger */
-  height: auto;
-  border-radius: 50%; /* Fully rounded corners */
-  margin: 0; /* Remove any default margin */
-}
-
-/* Responsive Design for Tablets */
-@media screen and (max-width: 1024px) {
-  .image-row img {
-    width: 30%;  /* Medium size for tablets */
-    max-width: 150px;
-    border-radius: 50%; /* Ensure fully rounded corners */
-  }
-}
-
 /* Responsive Design for Mobile */
 @media screen and (max-width: 500px) {
-  .image-row img {
-    width: 50%;  /* Increase size for mobile */
-    max-width: 120px; /* Adjust max size for mobile */
-    border-radius: 50%; /* Fully rounded corners */
-  }
-  
   page-title {
     font-size: 48px;
   }
@@ -223,19 +167,6 @@ colour-table {
   clear: both;
   display: table;
 }
-
-/* Updated Clearfix - Now Sticky */
-/*.clearfix {
-  content: "";
-  clear: both;
-  display: table;
-  position: sticky; /* Makes navbar stick to the top */
- /* top: 0; /* Stays at the very top */
-  /*background: white; /* Ensures it's visible */
-  /*z-index: 1000; /* Keeps it above other elements */
-  /*padding: 10px 0; /* Adds some spacing */
-  /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
-/*}*/
 
 .nav-list {
   list-style-type: none;
@@ -375,235 +306,35 @@ colour-table {
     }
 }
 
-/* Shop Stuff */
-.shop-card {
-    width: 420px; /* Fixed width */
-    background-color: #ffffff; /* White background */
-    border-radius: 15px; /* Rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto; /* Center the card horizontally */
-    position: relative;
+.verification-block {
+  max-width: 400px;        /* Same as .bio-card */
+  margin: 0 auto;          /* Center horizontally */
+  text-align: justify;     /* Justified text */
 }
 
-.shop-card-title {
-    font-size: 24px; /* Text size */
-    font-weight: bold; /* Bold text */
-    color: #6e6d68; /* Transparent fill color */
-    -webkit-text-stroke: 1px #24252b; /* Outline effect */
-    text-align: center; /* Center the text horizontally */
-    margin: 10px 0; /* Space around the title */
+.verification-block h4 {
+  text-align: justify;     /* Override center */
+  text-justify: inter-word;
+  font-family: "Arial Black", sans-serif;
+  font-size: 12px;
+  color: white;
+  line-height: 1.35;
 }
 
-.shop-card-description {
-    font-size: 18px; /* Text size */
-    /*font-weight: bold; /* Bold text */
-    color: #6e6d68; /* Transparent fill color */
-    -webkit-text-stroke: 1px #24252b; /* Outline effect */
-    text-align: center; /* Center the text horizontally */
-    margin: 10px 0; /* Space around the title */
+/* Keep title centered */
+.verification-block titles {
+  display: block;
+  text-align: center;
 }
 
-.shop-card-image {
-    width: 100%; /* Adjust image to fit card width */
-    height: 30%; /* Adjust height */
-    object-fit: cover; /* Ensure proper scaling */
-    transition: opacity 0.5s ease-in-out; /* Smooth transition effect */
-}
-
-.shop-card-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
-    height: 70%; /* Content takes up the remaining card height */
-}
-
-.shop-price-and-button {
-    display: flex;
-    justify-content: center; /* Center the items horizontally */
-    align-items: center; /* Center the items vertically */
-    width: 100%; /* Full width of the container */
-    gap: 15px; /* Space between the price and button */
-}
-
-.shop-money-tag {
-    font-size: 20px; /* Adjusted size to 20px */
-    font-weight: bold !important; /* Force bold text */
-    color: #6e6d68; /* Transparent fill color */
-    -webkit-text-stroke: 1px #24252b; /* Outline effect */
-    text-transform: uppercase; /* Uppercase text */
-    margin-right: 10px; /* Control spacing between price and button */
-}
-
-.shop-order-button {
-    padding: 10px 20px; /* Adjust button padding */
-    background-color: #ffcc00; /* Button background color */
-    color: #253b80; /* Button text color */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Rounded button corners */
-    cursor: pointer;
-    font-size: 16px;
-    text-transform: uppercase;
-    font-weight: bold !important; /* Force bold text */
-}
-
-.shop-order-button:hover {
-    background-color: #5d5d5d; /* Button hover color */
-}
-
-.circle-container {
-    display: flex;
-    justify-content: space-between; /* Space out the circles evenly */
-    width: 100%; /* Make sure it takes the full width */
-    padding: 10px; /* Add some padding to prevent the circles from touching edges */
-}
-
-.circle {
-    width: 50px; /* Set the size of the circle */
-    height: 50px; /* Set the size of the circle */
-    border-radius: 50%; /* Make them circular */
-    border: 2px solid #24252b; /* Border for unselected circles */
-    transition: border-color 0.3s; /* Smooth transition on hover/selection */
-    cursor: pointer; /* Make the cursor pointer when hovering */
-}
-
-/* Remove the hover effect */
-/*.circle:hover {
-    border-color: inherit; /* No change in border color on hover */
-/*}
-
-/* On Selection */
-/*.circle.selected {
-    border-color: #FCBB32; /* Green border when selected */
-/*}
-
-/* Custom Orders */
-/* Updated Shop Card for Second Box */
-.shop-card_2 {
-    width: 420px; /* Fixed width */
-    background-color: #ffffff; /* White background */
-    border-radius: 15px; /* Rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto; /* Add spacing between cards */
-    position: relative;
-}
-
-/* Shop Card Title for Second Box */
-.shop-card-title_2 {
-    font-size: 24px; /* Text size */
-    font-weight: bold; /* Bold text */
-    color: #6e6d68; /* Transparent fill color */
-    -webkit-text-stroke: 1px #24252b; /* Outline effect */
-    text-align: center; /* Center the text horizontally */
-    margin: 10px 0; /* Add more spacing around the title */
-}
-
-/* Shop Card Image for Second Box */
-.shop-card-image_2 {
-    width: 100%; /* Adjust image to fit card width */
-    height: auto; /* Automatically adjust height based on width */
-    object-fit: cover; /* Ensure proper scaling */
-}
-
-/* Shop Card Content for Second Box */
-.shop-card-content_2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 15px; /* Add more padding for spacing */
-    height: auto; /* Adjust content height dynamically */
-}
-
-/* Money Tag for Second Box */
-.shop-money-tag_2 {
-    font-size: 20px; /* Adjusted size to 20px */
-    font-weight: bold; /* Bold text */
-    color: #6e6d68; /* Transparent fill color */
-    -webkit-text-stroke: 1px #24252b; /* Outline effect */
-    text-transform: uppercase; /* Uppercase text */
-    margin-right: 10px; /* Add spacing between price and button */
-}
-
-/* Circle Container for Second Box */
-.circle-container_2 {
-    display: flex;
-    justify-content: space-evenly; /* Space out the circles evenly */
-    width: 100%; /* Full width of container */
-    padding: 10px; /* Add padding */
-}
-
-/* Circles for Second Box */
-.circle_2 {
-    width: 50px; /* Set the size of the circle */
-    height: 50px; /* Set the size of the circle */
-    border-radius: 50%; /* Make them circular */
-    border: 2px solid #24252b; /* Border for unselected circles */
-    transition: border-color 0.3s; /* Smooth transition on hover/selection */
-    cursor: pointer; /* Make the cursor pointer on hover */
-}
-
-/* Hover Effect for Circles in Second Box */
-.circle_2:hover {
-    border-color: red; /* Change border to red on hover */
-}
-
-/* Selected State for Circles in Second Box */
-.circle_2.selected {
-    border-color: #FCBB32; /* Green border when selected */
-}
-
-.shop-price-and-button_2 {
-    display: flex;
-    justify-content: center; /* Center the items as a group */
-    align-items: center; /* Align items vertically in the middle */
-    gap: 20px; /* Space between the button and link */
-    width: 100%; /* Full width of the container */
-}
-
-.shop-order-button_2 {
-    padding: 10px 20px; /* Adjust button padding */
-    background-color: #ffcc00; /* Button background color */
-    color: #253b80; /* Button text color */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Rounded button corners */
-    cursor: pointer;
-    font-size: 16px;
-    text-transform: uppercase;
-    font-weight: bold !important; /* Force bold text */
-}
-
-.shop-order-button_2:hover {
-    background-color: #5d5d5d; /* Button hover color */
-}
-
-.shop-tc-text_2 {
-    font-size: 20px; /* Adjust text size */
-    font-weight: bold; /* Bold text */
-    color: red; /* Text color */
-    text-decoration: underline; /* Add underline */
-    cursor: pointer; /* Pointer cursor */
-}
-
-.shop-tc-text_2:hover {
-    color: #24252b; /* Color change on hover */
-}
-
-/* Responsive adjustments for mobile screens */
+/* Verification text responsiveness */
 @media (max-width: 600px) {
-    .shop-card, .shop-card_2 {
-        width: 90%; /* Take up 90% width on mobile screens */
-        height: auto; /* Let height adjust naturally */
-    }
-    .circle {
-        width: 40px; /* Slightly smaller circles for mobile */
-        height: 40px;
-    }
+  .verification-block {
+    max-width: 90%;   /* Match bio-card mobile width */
+  }
+
+  .verification-block h4 {
+    text-align: justify;
+    line-height: 1.4; /* Improves readability on small screens */
+  }
 }
