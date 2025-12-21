@@ -1,3 +1,14 @@
+/* ===============================
+   ROOT
+   =============================== */
+:root {
+  --footer-gap: 5px;
+  --footer-height: 52px; /* adjust if footer text wraps */
+}
+
+/* ===============================
+   MAIN
+   =============================== */
 html {
 	height: -webkit-fill-available;
 }
@@ -84,6 +95,33 @@ html, body {
 }
 
 /* ===============================
+   FOOTER
+   =============================== */
+.footer {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: calc(var(--footer-gap) + env(safe-area-inset-bottom));
+  background-color: #333333;
+  border-radius: 20px;
+  padding: 5px 20px;
+  white-space: nowrap;
+  max-width: 90%;
+  box-sizing: border-box;
+  text-align: center;
+  color: white;
+  z-index: 1000;
+}
+
+.footer-spacer {
+  height: calc(
+    52px + 
+    5px + 
+    env(safe-area-inset-bottom)
+  );
+}
+
+/* ===============================
    TEXT
    =============================== */
 /*Page Header*/
@@ -91,7 +129,7 @@ html, body {
 	color: white;
 	text-align: center;
 	font-family: "Impact", sans-serif;
-	font-size: 64px;
+	font-size: 48px;
 }
 
 /*Section Titles*/
@@ -149,6 +187,7 @@ html, body {
   
 }
 
+/*Smaller Text*/
 .text-6 {
   font-size: 11.2px;
 }
@@ -161,33 +200,6 @@ html, body {
 
 .text-6-1:hover {
   text-decoration: underline;
-}
-
-/* ===============================
-   FOOTER
-   =============================== */
-.footer {
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: calc(var(--footer-gap) + env(safe-area-inset-bottom));
-  background-color: #333333;
-  border-radius: 20px;
-  padding: 5px 20px;
-  white-space: nowrap;
-  max-width: 90%;
-  box-sizing: border-box;
-  text-align: center;
-  color: white;
-  z-index: 1000;
-}
-
-.footer-spacer {
-  height: calc(
-    52px + 
-    5px + 
-    env(safe-area-inset-bottom)
-  );
 }
 
 /* ===============================
@@ -248,9 +260,4 @@ html, body {
     margin: 0; /* No margin for better alignment */
     margin-top: 5px; /* Add slight space below the title */
     text-decoration: none;
-}
-
-:root {
-  --footer-gap: 5px;
-  --footer-height: 52px; /* adjust if footer text wraps */
 }
